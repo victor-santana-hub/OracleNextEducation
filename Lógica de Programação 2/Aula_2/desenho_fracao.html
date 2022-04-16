@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="UTF-8">
+<title>Desenho Fração</title>
+<head></head>
+
+<body>
+    
+    <canvas width="600" height="400"></canvas>
+    
+    <script>
+        
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+        
+        function paintSquare(x, y, size, color) {
+
+        pincel.fillStyle = color;
+        pincel.fillRect(x, y, size, size);
+        pincel.strokeStyle = "black"
+        pincel.strokeRect(x, y, size, size);
+
+        }
+    
+        function paintText(text, x, y) {
+
+        pincel.font = "20px Georgia";
+        pincel.fillStyle = "black";
+        pincel.fillText(text, x, y);
+
+        }
+
+        paintText("Qual é a fração?", 25, 20);
+
+        paintSquare(0,50,50,"cyan");
+        paintSquare(50,50,50,"cyan");
+        paintSquare(100,50,50,"cyan");
+        paintSquare(150,50,50,"lightgray");
+
+
+
+
+    </script>
+        
+</body>

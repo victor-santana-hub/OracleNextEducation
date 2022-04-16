@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="UTF-8">
+<title>Gráfico de Barras</title>
+<head></head>
+
+<body>
+    
+    <canvas width="600" height="400"></canvas>
+    
+    <script>
+        
+        function paintSquare(x, y, size, color) {
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = color;
+        pincel.fillRect(x, y, 50, size);
+        pincel.strokeStyle = "black"
+        pincel.strokeRect(x, y, 50, size);
+
+        }
+    
+        function paintText(text, x, y) {
+        
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.font = "20px Georgia";
+        pincel.fillStyle = "black";
+        pincel.fillText(text, x, y);
+
+        }
+
+        function paintGraph(x, y, serie, cores, text) {
+            
+            paintText(text, x, y-10);
+                
+                for(var position = 0; position < serie.length; position++){
+                    
+                    paintSquare(x, y, serie[position], cores[position]);
+                    y = y + serie[position];
+                }
+            
+        }
+        
+        var serie2015 = [50, 25, 20, 5];
+        var serie2016 = [65, 20, 13, 2];
+        var cores = ["blue", "green", "yellow", "red"];
+
+        paintGraph(50, 50, serie2015, cores, "2015");
+        paintGraph(150, 50, serie2016, cores, '2016');
+
+
+    </script>
+        
+</body>
