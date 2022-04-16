@@ -1,0 +1,43 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<script>
+
+//Funções
+
+function breakLine() {
+
+document.write("<br>");
+}
+
+function print(text) {
+
+document.write(text);
+breakLine();
+}
+
+
+var numeroFamiliares = parseInt(prompt("Digite a quantidade de familiares: "));
+var soma = 0;
+
+for(var contador = 0; contador < numeroFamiliares; contador++){
+
+   var idade = parseInt(prompt("Digite a idade de um familiar: "));
+   var soma = soma + idade;
+
+}
+
+var mediaIdades = soma / numeroFamiliares;
+print("A média das idades dos familiares é: " + mediaIdades);
+
+
+
+  
+
+
+
+
+
+
+
+
+</script>
