@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="UTF-8">
+<title>Desenho Creeper</title>
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext("2d");
+    
+    pincel.fillStyle = "lightgray";
+    pincel.fillRect(0,0,600,400); // fundo
+
+    pincel.fillStyle = "darkgreen";
+    pincel.fillRect(125,50,350,300); // cabeça
+
+    pincel.fillStyle = "black";
+    pincel.fillRect(175,100,90,90); //olho esquerdo
+    pincel.fillRect(335,100,90,90); // olho direito
+    pincel.fillRect(265,190,70,100); // nariz
+    pincel.fillRect(225,240,40,110); // boca esquerda
+    pincel.fillRect(335,240,40,110); // boca direita
+
+</script>
