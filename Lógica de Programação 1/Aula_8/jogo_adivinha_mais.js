@@ -1,4 +1,4 @@
-    //Funções
+//Funções
     
     function breakLine() {
     
@@ -25,7 +25,11 @@
             alert("Você Errou!");
         }
         
+        input.value = " ";
+        input.focus();
+
     }
+
     // Variáveis
     
     var segredo = sorteia(10);
@@ -33,7 +37,8 @@
     var button = document.querySelector("button");
 
     // Programa
-    
+
+    input.focus();
     button.onclick = testaNumero;
    
         
